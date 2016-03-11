@@ -1,4 +1,6 @@
-# gulp-task-doc [![Build Status](https://travis-ci.org/megahertz/gulp-task-doc.svg?branch=master)](https://travis-ci.org/megahertz/gulp-task-doc)
+# gulp-task-doc 
+[![Build Status](https://travis-ci.org/megahertz/gulp-task-doc.svg?branch=master)](https://travis-ci.org/megahertz/gulp-task-doc)
+[![npm version](https://badge.fury.io/js/gulp-task-doc.svg)](https://badge.fury.io/js/gulp-task-doc)
 
 ## Description
 
