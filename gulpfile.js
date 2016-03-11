@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp   = require('.');
+var gulp   = require('./index');
 var jscs   = require('gulp-jscs');
 var jshint = require('gulp-jshint');
 var mocha  = require('gulp-mocha');
