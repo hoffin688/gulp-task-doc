@@ -34,7 +34,7 @@ gulp.task('jshint', function() {
 });
 
 // Run tests
-gulp.task('test', function() {
+gulp.task('test', ['jshint', 'jscs'], function() {
   return gulp.src('test/*.js', { read: false })
     .pipe(mocha({
       reporter: 'spec'

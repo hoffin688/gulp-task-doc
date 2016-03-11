@@ -1,6 +1,7 @@
 # gulp-task-doc
 
-## Description
+## Description [![Build Status](https://travis-ci.org/megahertz/gulp-task-doc.svg?branch=master)](https://travis-ci.org/megahertz/gulp-task-doc)
+
 Print gulp task list by reading task comments. Output example:
 
 ```bash

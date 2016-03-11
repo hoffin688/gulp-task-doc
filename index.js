@@ -27,10 +27,10 @@ function inheritGulp() {
 
     return function() {
       list.forEach(function(task) {
-        parser.parseComments(task, options.parser)
+        parser.parseComments(task, options.parser);
       });
       console.log(print(list));
-    }
+    };
   };
 
   return inst;
