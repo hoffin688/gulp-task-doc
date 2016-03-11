@@ -1,0 +1,46 @@
+{
+  "name": "gulp-task-doc",
+  "version": "1.0.0",
+  "description": "Make gulp task documentation easy - just write javascript comments",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megahertz/gulp-task-doc.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "help",
+    "task",
+    "doc",
+    "documentation",
+    "comment",
+    "jsdoc"
+  ],
+  "author": "Alexey Prokhorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/megahertz/gulp-task-doc/issues"
+  },
+  "homepage": "https://github.com/megahertz/gulp-task-doc#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-bump": "^1.0.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "jshint": "^2.9.1",
+    "jshint-reporter-jscs": "^0.1.0",
+    "mocha": "^2.4.5",
+    "rewire": "^2.5.1",
+    "should": "^8.2.2",
+    "yargs": "^4.2.0"
+  },
+  "dependencies": {
+    "comments-parser": "^1.0.0",
+    "stack-trace": "0.0.9"
+  }
+}
