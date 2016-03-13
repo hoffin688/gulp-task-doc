@@ -1,8 +1,10 @@
 'use strict';
 
 var gulp     = require('gulp');
+var argv     = require('yargs').alias('v', 'verbose').argv;
 var parser   = require('./lib/parser');
 var TaskList = require('./lib/models').TaskList;
+
 
 module.exports = inheritGulp();
 
@@ -37,6 +39,8 @@ function inheritGulp() {
 }
 
 function printTasks(tasks) {
+  tasks = tasks.filterHidden(argv.verbose);
+  
   var results = [
     'Usage: gulp [task] [task2] ...',
     '',

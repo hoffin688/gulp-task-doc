@@ -24,7 +24,7 @@ describe('parser', function() {
     it('should set lib filename', function() {
       var task = parser.makeTaskInfo('test', 0);
       task.file.should.endWith('lib/parser.js');
-      task.line.should.equal(19);
+      task.line.should.equal(18);
     });
     
   });
@@ -36,7 +36,6 @@ describe('parser', function() {
       line: 19
     });
     parser.parseComments(task);
-    //console.log(task);
   });
   
 });

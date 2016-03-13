@@ -11,7 +11,6 @@ var bump = require('gulp-bump');
  * --type=minor will bump the minor version *.x.*
  * --type=major will bump the major version x.*.*
  * --version=1.2.3 will bump to a specific version and ignore other flags
- * @verbose
  */
 gulp.task('bump', function() {
   return gulp

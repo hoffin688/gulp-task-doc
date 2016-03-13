@@ -18,14 +18,20 @@ gulp.task('help', gulp.help());
 
 require('./gulp/bump');
 
-// Check code style
+/**
+ * Check code style
+ * @verbose
+ */
 gulp.task('jscs', function() {
   return gulp.src(jsFiles)
     .pipe(jscs())
     .pipe(jscs.reporter());
 });
 
-// Analise code quality 
+/**
+ * Analise code quality
+ * @verbose
+ */
 gulp.task('jshint', function() {
   return gulp.src(jsFiles)
     .pipe(jshint())
