@@ -47,11 +47,12 @@ gulp.task('default', ['help']);
  */
 gulp.task('help', gulp.help());
 
-require('./gulp/bump');
-
-// Check code style
+/**
+ * Check code style
+ * @verbose
+ */
 gulp.task('jscs', function() {
-  return gulp.src(['index.js', 'lib/*.js'])
+  return gulp.src(jsFiles)
     .pipe(jscs())
     .pipe(jscs.reporter());
 });

@@ -40,6 +40,7 @@ describe('models', function() {
 
       should(info.tag('group')).equal('Deploy');
       should(info.tag('verbose')).equal(true);
+      should(info.tag('notExists')).equal(null);
     });
     
   });
@@ -120,6 +121,18 @@ describe('models', function() {
       listVerbose.tasks[0].name.should.equal('task1');
       listVerbose.tasks[1].name.should.equal('task3');
     });
+    
+    it('should have getLongestNameLength', function() {
+      var list = createSimpleList();
+      list.getLongestNameLength().should.equal(5);
+      
+      list.tasks[1].name = 'task2-longer';
+      list.getLongestNameLength().should.equal(12);
+
+      list.tasks[0].name = 'task1-longest';
+      list.getLongestNameLength().should.equal(13);
+    });
+    
   });
   
   function createSimpleList() {

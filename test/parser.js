@@ -9,8 +9,6 @@ var parser   = require('../lib/parser');
 var TaskInfo = require('../lib/models').TaskInfo;
 
 
-var parserModule = rewire('../lib/parser');
-
 describe('parser', function() {
   
   describe('makeTaskInfo', function() {
@@ -18,7 +16,7 @@ describe('parser', function() {
     it('should set this filename', function() {
       var task = parser.makeTaskInfo('test', 1);
       task.file.should.endWith('test/parser.js');
-      task.line.should.equal(19);
+      task.line.should.equal(17);
     });
 
     it('should set lib filename', function() {

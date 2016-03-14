@@ -8,6 +8,10 @@ var TaskList = require('./lib/models').TaskList;
 
 module.exports = inheritGulp();
 
+/**
+ * Return a new instance that is inherited from Gulp
+ * @returns {TaskDoc}
+ */
 function inheritGulp() {
   function TaskDoc() {
     this.taskList = new TaskList();
