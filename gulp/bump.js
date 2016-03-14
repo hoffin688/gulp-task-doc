@@ -14,8 +14,7 @@ var bump = require('gulp-bump');
  */
 gulp.task('bump', function() {
   return gulp
-    .src(config.packages)
-    .pipe($.print())
+    .src('package.json')
     .pipe(bump({
       type: args.type,
       version: args.version
