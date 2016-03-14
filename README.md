@@ -13,19 +13,25 @@ $ gulp help
 Usage: gulp [task] [task2] ...
 
 Tasks:  
-   help      Display this help
-   bump      Bump the version
-               --type=pre will bump the prerelease version *.*.*-x
-               --type=patch or no flag will bump the patch version *.*.x
-               --type=minor will bump the minor version *.x.*
-               --type=major will bump the major version x.*.*
-               --version=1.2.3 will bump to a specific version and ignore other flags
-   jscs      Check code style
-   jshint    Analise code quality
-   test      Run tests
+   help     Display this help
+   bump     Bump the version
+              --type=pre will bump the prerelease version *.*.*-x
+              --type=patch or no flag will bump the patch version *.*.x
+              --type=minor will bump the minor version *.x.*
+              --type=major will bump the major version x.*.*
+              --version=1.2.3 will bump to a specific version and ignore other flags
+   jscs     Check code style
+   jshint   Analise code quality
+   test     Run tests
 [11:25:59] Finished 'help' after 15 ms
 
 ```
+
+## Features
+ * Support a separation of gulpfile into multiple files
+ * @internal jsdoc-like tag to hide a task from help
+ * @verbose jsdoc-like tag to show a task only with a --verbose argument
+ * Help output can be customized
 
 ## Installation
 
@@ -62,12 +68,13 @@ gulp.task('jscs', function() {
 ```javascript
 print({
   parser: { // Options for [node-comments-parser](https://github.com/megahertz/node-comments-parser)
-    addEsprimaInfo: false,
-    parseJsDocTags: true,
-    hideJsDocTags: true,
-  	trim: true
+    //...
   },
-  print: function(tasks) { // Custom print function
+  print: function(tasks, isVerbose) { // Custom print function
+    tasks = tasks
+      .filterHidden(isVerbose)
+      .sort();
+      
     var lines = [
       'gulp [task]\n',
       'Tasks:'

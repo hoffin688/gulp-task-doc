@@ -13,6 +13,7 @@ gulp.task('default', ['help']);
 
 /**
  * Display this help
+ * -v, --verbose Show additional tasks
  */
 gulp.task('help', gulp.help());
 

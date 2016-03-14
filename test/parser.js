@@ -3,10 +3,7 @@
 require('mocha');
 require('should');
 
-var fs       = require('fs');
-var rewire   = require('rewire');
 var parser   = require('../lib/parser');
-var TaskInfo = require('../lib/models').TaskInfo;
 
 
 describe('parser', function() {
@@ -16,7 +13,7 @@ describe('parser', function() {
     it('should set this filename', function() {
       var task = parser.makeTaskInfo('test', 1);
       task.file.should.endWith('test/parser.js');
-      task.line.should.equal(17);
+      task.line.should.equal(14);
     });
 
     it('should set lib filename', function() {
@@ -28,11 +25,11 @@ describe('parser', function() {
   });
   
   it('parseComments should set valid comment', function() {
-    var task = new TaskInfo({
+    var task = {
       name: 'jscs',
       file: __dirname + '/../gulpfile.js',
       line: 19
-    });
+    };
     parser.parseComments(task);
   });
   
