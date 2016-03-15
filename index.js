@@ -12,9 +12,9 @@ module.exports = inheritGulp();
 
 /**
  * Define a task
- * @param {string} name The name of the task.
- * @param {Array} [dep] Task dependencies
- * @param {Function} fn The function that performs the task's operations
+ * @param {string}   name  The name of the task.
+ * @param {Array}    [dep] Task dependencies
+ * @param {Function} [fn]  The function that performs the task's operations
  * @return {Stream|Promise}
  */
 module.exports.task = function task(name, dep, fn) {
