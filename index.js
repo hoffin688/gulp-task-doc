@@ -1,14 +1,17 @@
 'use strict';
 
 var gulp = require('gulp');
-var argv = require('yargs').alias('v', 'verbose').argv;
 
 var parser   = require('./lib/parser');
 var printer  = require('./lib/printer');
 var TaskList = require('./lib/models').TaskList;
 
-
 module.exports = inheritGulp();
+
+var argv = {
+  verbose: -1 !== process.argv.indexOf('-v') ||
+           -1 !== process.argv.indexOf('--verbose')
+};
 
 /**
  * Define a task

@@ -1,6 +1,6 @@
 {
   "name": "gulp-task-doc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Make gulp task documentation (help) easy - just write javascript comments",
   "main": "index.js",
   "scripts": {
@@ -36,11 +36,11 @@
     "jshint-reporter-jscs": "^0.1.0",
     "mocha": "^2.4.5",
     "rewire": "^2.5.1",
-    "should": "^8.2.2"
+    "should": "^8.2.2",
+    "yargs": "^4.3.1"
   },
   "dependencies": {
     "comments-parser": "^1.0.0",
-    "stack-trace": "0.0.9",
-    "yargs": "^4.2.0"
+    "stack-trace": "0.0.9"
   }
 }
