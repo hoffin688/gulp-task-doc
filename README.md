@@ -83,6 +83,19 @@ gulp.task('bump', function() {
 
 ```
 
+## Alternative initialization
+
+If you want to use gulp instead of gulp-task-doc to define tasks you can
+use a patchGulp method that uses monkey-patching to override a gulp.task method:
+
+```javascript
+var gulp = require('gulp');
+var doc  = require('gulp-task-doc').patchGulp();
+
+// Display this help
+gulp.task('help', doc.help());
+```
+
 ## Options
 ```javascript
 print({
