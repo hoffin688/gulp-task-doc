@@ -1,6 +1,6 @@
 {
   "name": "gulp-task-doc",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Make gulp task documentation (help) easy - just write javascript comments",
   "main": "index.js",
   "scripts": {

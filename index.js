@@ -6,12 +6,37 @@ var parser   = require('./lib/parser');
 var printer  = require('./lib/printer');
 var TaskList = require('./lib/models').TaskList;
 
-module.exports = inheritGulp();
 
 var argv = {
   verbose: -1 !== process.argv.indexOf('-v') ||
            -1 !== process.argv.indexOf('--verbose')
 };
+
+module.exports = inheritGulp();
+
+/**
+ * Emits files matching provided glob or an array of globs.
+ * @param {string|Array} glob
+ * @param {Object}       [options]
+ * @returns {Stream}
+ * @name module.exports.src
+ */
+
+/**
+ * Can be piped to and it will write files.
+ * @param {string|Function} path
+ * @param {Object}          [options]
+ * @name module.exports.dest
+ */
+
+/**
+ * Watch files and do something when a file changes.
+ * @param {string|Array}   glob
+ * @param {Object}         [options]
+ * @param {Array|Function} [tasks]
+ * @return {EventEmitter}
+ * @name module.exports.watch
+ */
 
 /**
  * Define a task
@@ -57,7 +82,7 @@ module.exports.patchGulp = function patchGulp(gulpInst) {
     module.exports.taskList.push(parser.makeTaskInfo(name));
     return originalTasks.apply(gulpInst, arguments);
   };
-  
+
   return this;
 };
 
