@@ -30,15 +30,6 @@ module.exports = inheritGulp();
  */
 
 /**
- * Watch files and do something when a file changes.
- * @param {string|Array}   glob
- * @param {Object}         [options]
- * @param {Array|Function} [tasks]
- * @return {EventEmitter}
- * @name module.exports.watch
- */
-
-/**
  * Define a task
  * @param {string}   name  The name of the task.
  * @param {Array}    [dep] Task dependencies
@@ -48,6 +39,18 @@ module.exports = inheritGulp();
 module.exports.task = function task(name, dep, fn) {
   this.taskList.push(parser.makeTaskInfo(name));
   return gulp.task.apply(gulp, arguments);
+};
+
+/**
+ * Watch files and do something when a file changes.
+ * @param {string|Array}   glob
+ * @param {Object}         [opt]
+ * @param {Array|Function} [fn]
+ * @return {EventEmitter}
+ * @name module.exports.watch
+ */
+module.exports.watch = function watch(glob, opt, fn) {
+  return gulp.watch.apply(gulp, arguments);
 };
 
 /**
