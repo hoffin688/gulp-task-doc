@@ -65,11 +65,12 @@ module.exports.help = function help(options) {
   var list = module.exports.taskList;
   var print = options.print || printer;
 
-  return function() {
+  return function(done) {
     list.forEach(function(task) {
       parser.parseComments(task, options.parser);
     });
     console.log(print(list, argv.verbose));
+    done();
   };
 };
 
