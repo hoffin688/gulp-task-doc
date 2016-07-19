@@ -1,6 +1,6 @@
 {
   "name": "gulp-task-doc",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Make gulp task documentation (help) easy - just write javascript comments",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,11 @@
     "documentation",
     "comment",
     "jsdoc"
+  ],
+  "files": [
+    "index.js",
+    "README.md",
+    "lib/*"
   ],
   "author": "Alexey Prokhorov",
   "license": "MIT",
