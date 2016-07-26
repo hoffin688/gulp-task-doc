@@ -70,7 +70,9 @@ module.exports.help = function help(options) {
       parser.parseComments(task, options.parser);
     });
     console.log(print(list, argv.verbose));
-    done();
+    if (typeof done === 'function') {
+      done();
+    }
   };
 };
 
