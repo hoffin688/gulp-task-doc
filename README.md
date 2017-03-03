@@ -1,4 +1,4 @@
-# gulp-task-doc 
+# gulp-task-doc
 [![Build Status](https://travis-ci.org/megahertz/gulp-task-doc.svg?branch=master)](https://travis-ci.org/megahertz/gulp-task-doc)
 [![npm version](https://badge.fury.io/js/gulp-task-doc.svg)](https://badge.fury.io/js/gulp-task-doc)
 
@@ -12,7 +12,7 @@ $ gulp help
 [11:25:58] Starting 'help'...
 Usage: gulp [task] [task2] ...
 
-Tasks:  
+Tasks:
    help     Display this help
    bump     Bump the version
               --type=pre will bump the prerelease version *.*.*-x
@@ -97,8 +97,11 @@ gulp.task('help', doc.help());
 ```
 
 ## Options
+
+Customize the output by passing a configuration object to the `doc.help()` function.
+
 ```javascript
-print({
+doc.help({
   parser: { // Options for [node-comments-parser](https://github.com/megahertz/node-comments-parser)
     //...
   },
@@ -106,7 +109,7 @@ print({
     tasks = tasks
       .filterHidden(isVerbose)
       .sort();
-      
+
     var lines = [
       'gulp [task]\n',
       'Tasks:'
